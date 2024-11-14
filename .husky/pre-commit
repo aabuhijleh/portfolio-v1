@@ -1,0 +1,8 @@
+# Run ESLint fix
+eslint $(git diff --cached --name-only --diff-filter=ACMR "*.js" "*.jsx" "*.ts" "*.tsx") --fix || true
+
+# Format with Prettier
+prettier $(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g') --write --ignore-unknown
+
+# Stage the changes made by ESLint and Prettier
+git update-index --again
