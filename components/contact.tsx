@@ -1,9 +1,7 @@
-import { Section } from "./section";
-
 export const Contact = () => {
   return (
-    <Section id="contact">
+    <section id="contact">
       <div>Contact</div>
-    </Section>
+    </section>
   );
 };
