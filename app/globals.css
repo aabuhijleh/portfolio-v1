@@ -54,4 +54,18 @@
   .hover-underline:hover::after {
     @apply w-full;
   }
+
+  .neon-button {
+    @apply relative block cursor-pointer rounded-md border-2 border-emerald-500 px-5 py-2.5 text-lg font-medium text-emerald-500 transition-[background-color,color,box-shadow];
+  }
+  .neon-button::before {
+    content: "";
+    @apply absolute inset-0 -z-10 rounded-md bg-emerald-500 opacity-0 transition-all;
+  }
+  .neon-button:hover {
+    @apply bg-emerald-500 text-white;
+  }
+  .neon-button:hover::before {
+    @apply opacity-50 blur-2xl;
+  }
 }

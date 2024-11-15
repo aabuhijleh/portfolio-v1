@@ -4,29 +4,32 @@ import {
   SiLinkedin as Linkedin,
   SiX as X,
 } from "@icons-pack/react-simple-icons";
-import { FileUser, Send } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Section } from "./section";
-import { Button } from "./ui/button";
 
 export const Hero = () => {
   return (
     <Section>
-      <div>
-        <div className="tracking-widest text-emerald-400 transition-all duration-300">
-          👋, my name is
+      <div className="space-y-8">
+        <div>
+          <div className="tracking-widest text-emerald-400 transition-all duration-300">
+            👋, my name is
+          </div>
+          <h1 className="relative inline-block animate-gradient scroll-m-20 bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 bg-[size:400%] bg-clip-text text-7xl font-extrabold tracking-tight text-transparent">
+            Abed Abu-Hijleh
+            <span className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 opacity-30 blur-3xl"></span>
+          </h1>
+          <div className="mt-2">
+            I&apos;m a{" "}
+            <span className="tracking-widest text-emerald-400">
+              full-stack software engineer
+            </span>
+            .
+          </div>
         </div>
-        <h1 className="inline-block animate-gradient scroll-m-20 bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 bg-[size:400%] bg-clip-text text-7xl font-extrabold tracking-tight text-transparent">
-          Abed Abu-Hijleh
-        </h1>
-        <div className="mt-2">
-          I&apos;m a{" "}
-          <span className="tracking-widest text-emerald-400">
-            full-stack software engineer
-          </span>
-          .
-        </div>
-        <div className="mt-4 flex gap-2">
+
+        <div className="flex gap-2">
           <a
             className="rounded-md p-1 transition-colors hover:bg-foreground hover:text-background"
             href="https://github.com/aabuhijleh"
@@ -60,21 +63,28 @@ export const Hero = () => {
             <X size={32} />
           </a>
         </div>
-        <div className="mt-4 flex gap-4">
-          <Button asChild className="rounded text-lg font-semibold" size="lg">
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-              <FileUser />
-              View resume
-            </a>
-          </Button>
-          <Button asChild className="rounded text-lg font-semibold" size="lg">
-            <Link href="#contact">
-              <Send />
-              Contact me
-            </Link>
-          </Button>
+
+        <div className="flex gap-4">
+          <a
+            className="neon-button"
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            📄 View resume
+          </a>
+          <Link className="neon-button" href="#contact">
+            🤙 Contact me
+          </Link>
         </div>
       </div>
+
+      <Image
+        src="/about-code.png"
+        alt="Abed Abu-Hijleh"
+        width={680}
+        height={400}
+      />
     </Section>
   );
 };
