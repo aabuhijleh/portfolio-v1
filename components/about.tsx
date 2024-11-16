@@ -9,23 +9,48 @@ import timezone from "dayjs/plugin/timezone";
 import { useInterval } from "~/hooks/useInterval";
 import { cn } from "~/lib/utils";
 import styles from "./about.module.css";
+import { useIsMobile } from "~/hooks/useIsMobile";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
 export const About = () => {
   const [time, setTime] = useState<dayjs.Dayjs | null>(null);
+  const isMobile = useIsMobile();
 
-  const codeString = `const aboutMe = {
-  name: "Abed Abu-Hijleh",
-  title: "Senior Software Engineer",
-  skills: ["JavaScript", "React", "Node.js", "CSS Wizardry"],
-  passion: "Crafting elegant solutions to complex problems",
-  funFact: "Speaks fluent code and coffee.",
-  quote: "It's not a bug; it's an undocumented feature!",
+  const codeStringDesktop = `const aboutMe = {
   location: "West Bank",
   localTime: "${time?.format("h:mm:ss A") ?? "N/A"}",
+  skills: {
+    languages: ["Typescript", "Javascript", "Python", "HTML", "CSS"],
+    frameworks: ["React", "Next.js", "Node.js", "Django", "Electron"],
+  },
+  quote: "Coding for food 🍕",
 };`;
+
+  const codeStringMobile = `const aboutMe = {
+    location: "West Bank",
+    localTime: "${time?.format("h:mm:ss A") ?? "N/A"}",
+    skills: {
+      languages: [
+        "Typescript",
+        "Javascript",
+        "Python",
+        "HTML",
+        "CSS",
+      ],
+      frameworks: [
+        "React",
+        "Next.js",
+        "Node.js",
+        "Django",
+        "Electron",
+      ],
+    },
+    quote: "Coding for food 🍕",
+};`;
+
+  const codeString = isMobile ? codeStringMobile : codeStringDesktop;
 
   useEffect(() => {
     // Set in useEffect to avoid hydration error
@@ -38,17 +63,15 @@ export const About = () => {
   }, 1000);
 
   return (
-    <section
-      id="about"
-      className={cn("flex items-center justify-center py-24")}
-    >
+    <section id="about" className={cn("flex justify-center py-24")}>
       <div>
         <SyntaxHighlighter
-          className={cn(styles.editor, "shadow")}
+          className={cn(styles.editor, "rounded shadow")}
           language="javascript"
           style={synthwave84}
-          customStyle={{
-            borderRadius: "0.25rem",
+          wrapLines
+          lineProps={{
+            style: { whiteSpace: "pre-wrap" },
           }}
         >
           {codeString}

@@ -10,8 +10,6 @@ export const useIntersecting = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setIsIntersecting(true);
-        } else {
-          setIsIntersecting(false);
         }
       });
     });

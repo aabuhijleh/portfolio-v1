@@ -56,7 +56,7 @@ export const Hero = () => {
               key={link.href}
               className={cn(isIntersecting && "animate-fade-up")}
               style={{
-                animationDelay: `${index * 150 + 500}ms`,
+                animationDelay: `${index * 150 + 1200}ms`,
               }}
             >
               <a

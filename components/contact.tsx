@@ -1,10 +1,7 @@
 export const Contact = () => {
   return (
-    <section
-      id="contact"
-      className="mt-1 flex min-h-svh items-center justify-center"
-    >
-      <div>Contact</div>
+    <section id="contact" className="py-24">
+      Contact
     </section>
   );
 };
