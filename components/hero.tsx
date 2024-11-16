@@ -21,7 +21,7 @@ export const Hero = () => {
         )}
       >
         <div>
-          <div className="tracking-widest text-emerald-400 transition-all duration-300">
+          <div className="text-lg tracking-widest text-emerald-400">
             <span className="inline-block animate-wave">👋</span>, my name is
           </div>
 

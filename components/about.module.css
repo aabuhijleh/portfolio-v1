@@ -1,0 +1,19 @@
+.editor {
+  margin: 0 !important;
+  padding-top: 3rem !important;
+  position: relative;
+}
+.editor:before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: #ff5f57; /* Close button */
+  /* prettier-ignore */
+  box-shadow:
+      1.3rem 0 0 #febc2e,/* Minimize button */
+      2.6rem 0 0 #28c840; /* Maximize button */
+}

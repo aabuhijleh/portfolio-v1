@@ -8,6 +8,7 @@ import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import { useInterval } from "~/hooks/useInterval";
 import { cn } from "~/lib/utils";
+import styles from "./about.module.css";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -39,11 +40,11 @@ export const About = () => {
   return (
     <section
       id="about"
-      className={cn("flex min-h-svh items-center justify-center")}
+      className={cn("flex items-center justify-center py-24")}
     >
       <div>
         <SyntaxHighlighter
-          className="editor shadow"
+          className={cn(styles.editor, "shadow")}
           language="javascript"
           style={synthwave84}
           customStyle={{

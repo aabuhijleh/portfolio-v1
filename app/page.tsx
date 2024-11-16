@@ -4,7 +4,7 @@ import { Contact } from "~/components/contact";
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-screen-xl">
+    <main className="mx-auto max-w-screen-xl px-8">
       <Hero />
       <About />
       <Contact />
