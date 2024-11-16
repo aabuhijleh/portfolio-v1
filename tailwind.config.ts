@@ -56,6 +56,9 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      transitionDuration: {
+        "2000": "2000ms",
+      },
       animation: {
         gradient: "gradient 6s linear infinite",
         wave: "wave 2.5s infinite",

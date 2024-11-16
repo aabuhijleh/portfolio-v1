@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, RefObject } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { synthwave84 } from "react-syntax-highlighter/dist/esm/styles/prism";
 import dayjs from "dayjs";
@@ -8,14 +8,16 @@ import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import { useInterval } from "~/hooks/useInterval";
 import { cn } from "~/lib/utils";
-import styles from "./about.module.css";
 import { useIsMobile } from "~/hooks/useIsMobile";
+import { useIsIntersecting } from "~/hooks/useIsIntersecting";
+import styles from "./about.module.css";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
 export const About = () => {
   const [time, setTime] = useState<dayjs.Dayjs | null>(null);
+  const { targetRef, isIntersecting } = useIsIntersecting();
   const isMobile = useIsMobile();
 
   const codeStringDesktop = `const aboutMe = {
@@ -64,9 +66,16 @@ export const About = () => {
 
   return (
     <section id="about" className={cn("flex justify-center py-24")}>
-      <div>
+      <div
+        className={cn(
+          "shadow-medium",
+          "-translate-x-full opacity-0 blur-sm transition-all duration-1000",
+          isIntersecting && "translate-x-0 opacity-100 blur-none",
+        )}
+        ref={targetRef as RefObject<HTMLDivElement>}
+      >
         <SyntaxHighlighter
-          className={cn(styles.editor, "rounded shadow")}
+          className={cn(styles.editor, "rounded")}
           language="javascript"
           style={synthwave84}
           wrapLines

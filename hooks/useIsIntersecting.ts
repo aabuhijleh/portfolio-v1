@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export const useIntersecting = () => {
+export const useIsIntersecting = () => {
   const targetRef = useRef<HTMLElement>(null);
   const [isIntersecting, setIsIntersecting] = useState(false);
 

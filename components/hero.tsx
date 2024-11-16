@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { links } from "~/assets/data";
-import { useIntersecting } from "~/hooks/useIntersecting";
+import { useIsIntersecting } from "~/hooks/useIsIntersecting";
 import { cn } from "~/lib/utils";
 
 export const Hero = () => {
-  const { targetRef, isIntersecting } = useIntersecting();
+  const { targetRef, isIntersecting } = useIsIntersecting();
 
   return (
     <section
