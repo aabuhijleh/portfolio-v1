@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { siteConfig } from "~/assets/config";
 import "./globals.css";
 
@@ -37,6 +37,11 @@ export const metadata: Metadata = {
     "software engineer",
     "web development",
   ],
+};
+
+export const viewport: Viewport = {
+  themeColor: "#050917",
+  colorScheme: "dark",
 };
 
 type RootLayoutProps = {

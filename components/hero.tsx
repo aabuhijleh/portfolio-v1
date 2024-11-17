@@ -2,28 +2,19 @@
 
 import Link from "next/link";
 import { socialLinks } from "~/assets/config";
-import { useIsIntersecting } from "~/hooks/useIsIntersecting";
 import { cn } from "~/lib/utils";
+import { BackgroundLines } from "./ui/background-lines";
 
 export const Hero = () => {
-  const { targetRef, isIntersecting } = useIsIntersecting();
-
   return (
-    <section
-      id="home"
-      ref={targetRef}
-      className={cn("flex min-h-svh w-full flex-col justify-center sm:px-0")}
+    <BackgroundLines
+      className={cn(
+        "flex min-h-svh w-full flex-col justify-center bg-inherit sm:px-0",
+      )}
     >
-      <div
-        className={cn(
-          "w-full space-y-8",
-          "motion-safe:-translate-x-full motion-safe:opacity-0 motion-safe:blur-sm motion-safe:transition-all motion-safe:duration-1000",
-          isIntersecting &&
-            "motion-safe:translate-x-0 motion-safe:opacity-100 motion-safe:blur-none",
-        )}
-      >
+      <div className="z-20 flex w-full flex-col gap-8">
         <div>
-          <div className="tracking-widest text-emerald-400 sm:text-lg">
+          <div className="mb-2 tracking-widest text-emerald-400 sm:text-lg">
             <span className="inline-block animate-wave">👋</span>, my name is
           </div>
 
@@ -32,13 +23,7 @@ export const Hero = () => {
           </h1>
           <div className="mt-4 w-max scroll-m-20 pb-2 text-lg sm:text-2xl md:text-3xl">
             I&apos;m a{" "}
-            <span
-              className={cn(
-                "relative text-emerald-400",
-                "after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all after:delay-700 after:duration-700",
-                isIntersecting && "after:w-full",
-              )}
-            >
+            <span className={cn("relative text-emerald-400")}>
               full-stack software engineer
             </span>
             .
@@ -49,9 +34,9 @@ export const Hero = () => {
           {socialLinks.map((link, index) => (
             <li
               key={link.href}
-              className={cn(isIntersecting && "motion-safe:animate-fade-up")}
+              className="motion-safe:animate-fade-up"
               style={{
-                animationDelay: `${index * 150 + 1200}ms`,
+                animationDelay: `${index * 150 + 100}ms`,
               }}
             >
               <a
@@ -67,7 +52,7 @@ export const Hero = () => {
           ))}
         </ul>
 
-        <div className="flex flex-wrap gap-4">
+        <div className="mt-2 flex flex-wrap gap-4">
           <a
             className="neon-button group"
             href="/resume.pdf"
@@ -84,6 +69,6 @@ export const Hero = () => {
           </Link>
         </div>
       </div>
-    </section>
+    </BackgroundLines>
   );
 };
