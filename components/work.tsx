@@ -9,7 +9,7 @@ export const Work = () => {
   const { targetRef, isIntersecting } = useIsIntersecting();
 
   return (
-    <section id="work" className="py-24">
+    <section id="work" className="overflow-hidden py-24">
       <div className="relative" ref={targetRef as RefObject<HTMLDivElement>}>
         {/* Timeline line */}
         <div

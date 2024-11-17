@@ -28,10 +28,7 @@ export const Contact = () => {
         </p>
 
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
-            href="mailto:aabuhijleh.dev@gmail.com"
-            className="neon-button w-[142px] sm:w-[154px]"
-          >
+          <a href="mailto:aabuhijleh.dev@gmail.com" className="neon-button">
             ✉️ Email Me
           </a>
 
@@ -39,7 +36,7 @@ export const Contact = () => {
             href="https://wa.me/+972599113856"
             target="_blank"
             rel="noopener noreferrer"
-            className="neon-button w-[142px] sm:w-[154px]"
+            className="neon-button"
           >
             💬 WhatsApp
           </a>

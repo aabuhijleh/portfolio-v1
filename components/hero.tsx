@@ -74,17 +74,14 @@ export const Hero = () => {
 
         <div className="flex flex-wrap gap-4">
           <a
-            className="neon-button group w-[160px] sm:w-[174px]"
+            className="neon-button group"
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
             <span className="inline-block animate-bounce">📄</span> View resume
           </a>
-          <Link
-            className="neon-button group w-[160px] sm:w-[174px]"
-            href="#contact"
-          >
+          <Link className="neon-button group" href="#contact">
             <span className="inline-block transition-transform group-hover:rotate-12">
               🤙
             </span>{" "}
