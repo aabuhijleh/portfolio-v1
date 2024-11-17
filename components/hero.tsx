@@ -11,21 +11,22 @@ export const Hero = () => {
   return (
     <section
       ref={targetRef}
-      className={cn("flex min-h-svh w-full flex-col justify-center")}
+      className={cn("flex min-h-svh w-full flex-col justify-center sm:px-0")}
     >
       <div
         className={cn(
-          "space-y-8",
-          "-translate-x-full opacity-0 blur-sm transition-all duration-1000",
-          isIntersecting && "translate-x-0 opacity-100 blur-none",
+          "w-full space-y-8",
+          "motion-safe:-translate-x-full motion-safe:opacity-0 motion-safe:blur-sm motion-safe:transition-all motion-safe:duration-1000",
+          isIntersecting &&
+            "motion-safe:translate-x-0 motion-safe:opacity-100 motion-safe:blur-none",
         )}
       >
         <div>
-          <div className="text-lg tracking-widest text-emerald-400">
+          <div className="tracking-widest text-emerald-400 sm:text-lg">
             <span className="inline-block animate-wave">👋</span>, my name is
           </div>
 
-          <h1 className="inline-block scroll-m-20 text-9xl font-extrabold tracking-tight">
+          <h1 className="inline-block scroll-m-20 text-6xl font-extrabold tracking-tight md:text-9xl">
             <span className="relative w-min animate-gradient bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 bg-[size:400%] bg-clip-text text-transparent">
               Abed{" "}
               <span className="absolute inset-0 animate-gradient bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 bg-[size:400%] opacity-10 blur-3xl"></span>
@@ -35,11 +36,11 @@ export const Hero = () => {
               <span className="absolute inset-0 animate-gradient bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 bg-[size:400%] opacity-10 blur-3xl"></span>
             </span>
           </h1>
-          <div className="mt-4 w-max scroll-m-20 pb-2 text-3xl font-extrabold">
+          <div className="mt-4 w-max scroll-m-20 pb-2 text-lg sm:text-2xl md:text-3xl">
             I&apos;m a{" "}
             <span
               className={cn(
-                "relative tracking-widest text-emerald-400",
+                "relative text-emerald-400",
                 "after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all after:delay-700 after:duration-700",
                 isIntersecting && "after:w-full",
               )}
@@ -50,11 +51,11 @@ export const Hero = () => {
           </div>
         </div>
 
-        <ul className="flex gap-2 duration-0 animate-in">
+        <ul className="flex flex-wrap gap-2 duration-0 animate-in">
           {links.map((link, index) => (
             <li
               key={link.href}
-              className={cn(isIntersecting && "animate-fade-up")}
+              className={cn(isIntersecting && "motion-safe:animate-fade-up")}
               style={{
                 animationDelay: `${index * 150 + 1200}ms`,
               }}
@@ -71,16 +72,19 @@ export const Hero = () => {
           ))}
         </ul>
 
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4">
           <a
-            className="neon-button group"
+            className="neon-button group w-[160px] sm:w-[174px]"
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
             <span className="inline-block animate-bounce">📄</span> View resume
           </a>
-          <Link className="neon-button group" href="#contact">
+          <Link
+            className="neon-button group w-[160px] sm:w-[174px]"
+            href="#contact"
+          >
             <span className="inline-block transition-transform group-hover:rotate-12">
               🤙
             </span>{" "}

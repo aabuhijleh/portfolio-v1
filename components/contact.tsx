@@ -1,6 +1,6 @@
 "use client";
 
-import { RefObject } from "react";
+import { type RefObject } from "react";
 import { useIsIntersecting } from "~/hooks/useIsIntersecting";
 
 export const Contact = () => {
@@ -28,7 +28,10 @@ export const Contact = () => {
         </p>
 
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a href="mailto:aabuhijleh.dev@gmail.com" className="neon-button">
+          <a
+            href="mailto:aabuhijleh.dev@gmail.com"
+            className="neon-button w-[142px] sm:w-[154px]"
+          >
             ✉️ Email Me
           </a>
 
@@ -36,7 +39,7 @@ export const Contact = () => {
             href="https://wa.me/+972599113856"
             target="_blank"
             rel="noopener noreferrer"
-            className="neon-button"
+            className="neon-button w-[142px] sm:w-[154px]"
           >
             💬 WhatsApp
           </a>
