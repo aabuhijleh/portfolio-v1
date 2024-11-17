@@ -4,7 +4,7 @@ import {
   SiLinkedin as Linkedin,
   SiX as X,
 } from "@icons-pack/react-simple-icons";
-import { BrandLink, Experience } from "~/types";
+import { BrandLink, Experience, Project } from "~/types";
 
 export const links: BrandLink[] = [
   {
@@ -70,5 +70,40 @@ export const experience: Experience[] = [
       "Developed a Google Chrome extension using TypeScript, enabling seamless browser access to communication features",
       "Mentored junior developers, guiding them through the onboarding process and accelerating their integration into the team",
     ],
+  },
+];
+
+export const projects: Project[] = [
+  {
+    name: "Better GitHub Profile",
+    description:
+      "Generates a good looking website using your GitHub profile data.",
+    technologies: ["React", "Styled Components", "GitHub GraphQL API"],
+    repoUrl: "https://github.com/aabuhijleh/better-github-profile",
+    externalUrl: "https://aabuhijleh.vercel.app/",
+  },
+  {
+    name: "keylogger.js",
+    description:
+      "A Node.js keylogger for Windows and macOS. It registers native low level hooks to capture keyboard events. node-addon-api is used to bridge between native and JavaScript worlds",
+    technologies: ["Node.js", "C++"],
+    repoUrl: "https://github.com/aabuhijleh/keylogger.js",
+    externalUrl: "https://www.npmjs.com/package/keylogger.js",
+  },
+  {
+    name: "electron-selected-text",
+    description:
+      "A cross-platform utility that enables retrieving selected text from any application. It achieves this by using RobotJS to synthesize a CommandOrControl+C keyboard shortcut then getting the value from the clipboard",
+    technologies: ["Node.js", "RobotJS"],
+    repoUrl: "https://github.com/aabuhijleh/electron-selected-text",
+    externalUrl: "https://www.npmjs.com/package/electron-selected-text",
+  },
+  {
+    name: "osw",
+    description:
+      "During the COVID-19 lockdown we all had to work from home. To make things worse, in our company, we had to fill out a form every day and use a slow, outdated website to submit it. With this tool, me and dozens of my coworkers do this chore in 5 seconds instead of 5 minutes",
+    technologies: ["Node.js", "Yargs", "Inquirer.js"],
+    repoUrl: "https://github.com/aabuhijleh/osw",
+    externalUrl: "https://www.npmjs.com/package/osw",
   },
 ];

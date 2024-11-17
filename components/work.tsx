@@ -9,7 +9,23 @@ export const Work = () => {
   const { targetRef, isIntersecting } = useIsIntersecting();
 
   return (
-    <section id="work" className="overflow-hidden py-24">
+    <section id="work" className="p-section overflow-hidden">
+      <div className="mb-16 flex items-center gap-4">
+        <div
+          className={`hidden h-[2px] flex-grow origin-right rounded-full bg-emerald-500/70 transition-transform duration-1000 sm:block ${
+            isIntersecting ? "scale-x-100" : "scale-x-0"
+          }`}
+        />
+        <h2 className="text-center text-2xl font-bold sm:text-3xl">
+          Experience
+        </h2>
+        <div
+          className={`h-[2px] flex-grow origin-left rounded-full bg-emerald-500/70 transition-transform duration-1000 ${
+            isIntersecting ? "scale-x-100" : "scale-x-0"
+          }`}
+        />
+      </div>
+
       <div className="relative" ref={targetRef as RefObject<HTMLDivElement>}>
         {/* Timeline line */}
         <div

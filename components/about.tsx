@@ -65,7 +65,12 @@ export const About = () => {
   }, 1000);
 
   return (
-    <section id="about" className={cn("flex justify-center py-24")}>
+    <section
+      id="about"
+      className={cn(
+        "p-section mx-auto flex flex-col items-center justify-center !pt-8",
+      )}
+    >
       <div
         className={cn(
           "shadow-medium",

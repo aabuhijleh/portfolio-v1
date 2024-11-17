@@ -13,3 +13,11 @@ export type Experience = {
   };
   accomplishments: string[];
 };
+
+export type Project = {
+  name: string;
+  description: string;
+  technologies: string[];
+  repoUrl: string;
+  externalUrl: string;
+};

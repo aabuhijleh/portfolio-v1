@@ -7,9 +7,9 @@ export const Contact = () => {
   const { targetRef, isIntersecting } = useIsIntersecting();
 
   return (
-    <section id="contact" className="container mx-auto px-4 py-24">
+    <section id="contact" className="p-section container mx-auto">
       <div
-        className={`space-y-8 text-center transition-all duration-1000 ${
+        className={`flex flex-col gap-8 text-center transition-all duration-1000 ${
           isIntersecting
             ? "translate-y-0 opacity-100"
             : "translate-y-10 opacity-0"
@@ -27,7 +27,7 @@ export const Contact = () => {
           respond as quickly as possible.
         </p>
 
-        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <div className="mt-5 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a href="mailto:aabuhijleh.dev@gmail.com" className="neon-button">
             ✉️ Email Me
           </a>
