@@ -10,6 +10,7 @@ export const Hero = () => {
 
   return (
     <section
+      id="home"
       ref={targetRef}
       className={cn("flex min-h-svh w-full flex-col justify-center sm:px-0")}
     >

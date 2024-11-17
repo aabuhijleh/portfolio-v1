@@ -63,7 +63,7 @@ export default {
         gradient: "gradient 6s linear infinite",
         wave: "wave 2.5s infinite",
         "fade-up": "fade-up 0.5s ease-out backwards",
-        "fade-up-more": "fade-up-more 0.5s ease-out backwards",
+        "fade-side": "fade-side 0.5s ease-out backwards",
       },
       keyframes: {
         gradient: {
@@ -90,14 +90,14 @@ export default {
             transform: "translateY(0)",
           },
         },
-        "fade-up-more": {
+        "fade-side": {
           "0%": {
             opacity: "0",
-            transform: "translateY(100%)",
+            transform: "translateX(100%)",
           },
           "100%": {
             opacity: "1",
-            transform: "translateY(-6rem)",
+            transform: "translateX(0)",
           },
         },
       },

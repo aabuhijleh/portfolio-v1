@@ -49,7 +49,7 @@ export const About = () => {
         "Electron",
       ],
     },
-    quote: "Coding for food 🍕",
+    quote: "Coding for food",
 };`;
 
   const codeString = isMobile ? codeStringMobile : codeStringDesktop;
