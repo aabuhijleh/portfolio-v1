@@ -5,10 +5,12 @@ import { useEffect, useState } from "react";
 
 export const BackgroundLines = ({
   children,
+  id,
   className,
   svgOptions,
 }: {
   children: React.ReactNode;
+  id?: string;
   className?: string;
   svgOptions?: {
     duration?: number;
@@ -24,12 +26,7 @@ export const BackgroundLines = ({
   }, [shouldReduceMotion]);
 
   return (
-    <div
-      className={cn(
-        "h-[20rem] w-full bg-white dark:bg-black md:h-screen",
-        className,
-      )}
-    >
+    <div id={id} className={cn("h-[20rem] w-full md:h-screen", className)}>
       {animate && <SVG svgOptions={svgOptions} />}
       {children}
     </div>
