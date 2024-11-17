@@ -1,6 +1,10 @@
 import { cn } from "~/lib/utils";
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
+
+// There's type issue with framer motion, so that's why we need to disable the type checking
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const motion: any = m;
 
 export const BackgroundGradient = ({
   children,
