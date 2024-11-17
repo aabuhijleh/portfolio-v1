@@ -27,15 +27,8 @@ export const Hero = () => {
             <span className="inline-block animate-wave">👋</span>, my name is
           </div>
 
-          <h1 className="inline-block scroll-m-20 text-6xl font-extrabold tracking-tight md:text-9xl">
-            <span className="relative w-min animate-gradient bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 bg-[size:400%] bg-clip-text text-transparent">
-              Abed{" "}
-              <span className="absolute inset-0 animate-gradient bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 bg-[size:400%] opacity-10 blur-3xl"></span>
-            </span>
-            <span className="relative animate-gradient whitespace-nowrap bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 bg-[size:400%] bg-clip-text text-transparent">
-              Abu-Hijleh
-              <span className="absolute inset-0 animate-gradient bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 bg-[size:400%] opacity-10 blur-3xl"></span>
-            </span>
+          <h1 className="inline-block animate-gradient scroll-m-20 bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 bg-[size:400%] bg-clip-text text-6xl font-extrabold tracking-tight text-transparent md:text-9xl">
+            Abed <span className="whitespace-nowrap">Abu-Hijleh</span>
           </h1>
           <div className="mt-4 w-max scroll-m-20 pb-2 text-lg sm:text-2xl md:text-3xl">
             I&apos;m a{" "}

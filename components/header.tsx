@@ -27,7 +27,7 @@ export const Header = () => {
         show ? "translate-y-0" : "-translate-y-[calc(100%+2rem)]"
       }`}
     >
-      <nav className="group relative rounded-full border bg-gray-900/10 px-3 py-2 shadow-lg drop-shadow-2xl backdrop-blur-md transition-all duration-500 ease-in-out hover:bg-gray-900/20">
+      <nav className="group relative rounded-full border bg-card px-3 py-2 shadow-lg drop-shadow-2xl backdrop-blur-md transition-all duration-500 ease-in-out hover:bg-gray-900/20">
         <ul className="flex items-center justify-center gap-2 transition-all duration-500 group-hover:gap-6">
           {navLinks.map(({ href, label, icon: Icon }, index) => (
             <li
@@ -39,8 +39,8 @@ export const Header = () => {
                 href={href}
                 className="group/item flex h-8 w-8 flex-col items-center justify-center rounded-full transition-all duration-500 hover:bg-emerald-500/10 group-hover:h-16 group-hover:w-16"
               >
-                <Icon className="h-4 w-4 transform text-gray-200 transition-all duration-500 group-hover/item:scale-125 group-hover/item:text-emerald-400" />
-                <span className="absolute mt-1 scale-0 text-xs font-medium text-gray-200 opacity-0 transition-opacity duration-500 group-hover:relative group-hover:scale-100 group-hover/item:text-emerald-400 group-hover:opacity-100">
+                <Icon className="h-4 w-4 transform text-card-foreground transition-all duration-500 group-hover/item:scale-125 group-hover/item:text-emerald-400" />
+                <span className="absolute mt-1 scale-0 text-xs font-medium text-card-foreground opacity-0 transition-opacity duration-500 group-hover:relative group-hover:scale-100 group-hover/item:text-emerald-400 group-hover:opacity-100">
                   {label}
                 </span>
               </a>

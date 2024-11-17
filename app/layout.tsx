@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     creator: "@aabuhijleh_dev",
     images: ["/og.png"],
   },
+  creator: siteConfig.name,
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  keywords: [
+    "Abdurrahman Abu-Hijleh",
+    "developer",
+    "software engineer",
+    "web development",
+  ],
 };
 
 type RootLayoutProps = {
