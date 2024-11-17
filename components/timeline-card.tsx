@@ -16,10 +16,7 @@ export const TimelineCard = ({ job, index }: TimelineCardProps) => {
     : "md:-translate-x-[200px] translate-x-[200px]";
 
   return (
-    <div
-      ref={targetRef as RefObject<HTMLDivElement>}
-      className={`p-6 md:w-1/2`}
-    >
+    <div ref={targetRef as RefObject<HTMLDivElement>} className="p-6 md:w-1/2">
       <div
         className={`transform rounded-lg border bg-card p-6 text-card-foreground shadow-lg transition-all duration-700 ${isIntersecting ? "translate-x-0 opacity-100" : `opacity-0 ${slideDirection}`} ${isEven ? "md:ml-8" : "md:mr-8"} `}
       >

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { links } from "~/assets/data";
+import { socialLinks } from "~/assets/config";
 import { useIsIntersecting } from "~/hooks/useIsIntersecting";
 import { cn } from "~/lib/utils";
 
@@ -53,7 +53,7 @@ export const Hero = () => {
         </div>
 
         <ul className="flex flex-wrap gap-2 duration-0 animate-in">
-          {links.map((link, index) => (
+          {socialLinks.map((link, index) => (
             <li
               key={link.href}
               className={cn(isIntersecting && "motion-safe:animate-fade-up")}

@@ -4,9 +4,10 @@ import {
   SiLinkedin as Linkedin,
   SiX as X,
 } from "@icons-pack/react-simple-icons";
-import { BrandLink, Experience, Project } from "~/types";
+import { FolderGit, Briefcase, Home, User, Mail } from "lucide-react";
+import { BrandLink, Experience, Project, NavLink } from "~/types";
 
-export const links: BrandLink[] = [
+export const socialLinks: BrandLink[] = [
   {
     href: "https://github.com/aabuhijleh",
     icon: Github,
@@ -22,6 +23,34 @@ export const links: BrandLink[] = [
   {
     href: "https://x.com/aabuhijleh",
     icon: X,
+  },
+];
+
+export const navLinks: NavLink[] = [
+  {
+    href: "#home",
+    label: "Home",
+    icon: Home,
+  },
+  {
+    href: "#about",
+    label: "About",
+    icon: User,
+  },
+  {
+    href: "#work",
+    label: "Work",
+    icon: Briefcase,
+  },
+  {
+    href: "#projects",
+    label: "Projects",
+    icon: FolderGit,
+  },
+  {
+    href: "#contact",
+    label: "Contact",
+    icon: Mail,
   },
 ];
 

@@ -3,6 +3,12 @@ export type BrandLink = {
   icon: React.ElementType;
 };
 
+export type NavLink = {
+  href: string;
+  label: string;
+  icon: React.ElementType;
+};
+
 export type Experience = {
   company: string;
   companyUrl: string;

@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import { useIsIntersecting } from "~/hooks/useIsIntersecting";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { RefObject } from "react";
-import { projects } from "~/assets/data";
+import { projects } from "~/assets/config";
 
 export const Projects = () => {
   const { targetRef, isIntersecting } = useIsIntersecting();
