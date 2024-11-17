@@ -7,6 +7,12 @@ import {
 import { FolderGit, Briefcase, Home, User, Mail } from "lucide-react";
 import { BrandLink, Experience, Project, NavLink } from "~/types";
 
+export const siteConfig = {
+  name: "Abed Abu-Hijleh",
+  description: "Abed Abu-Hijleh is a full-stack software engineer 👨‍💻",
+  url: "https://aabuhijleh.com",
+};
+
 export const socialLinks: BrandLink[] = [
   {
     name: "GitHub",
@@ -25,7 +31,7 @@ export const socialLinks: BrandLink[] = [
   },
   {
     name: "X",
-    href: "https://x.com/aabuhijleh",
+    href: "https://x.com/aabuhijleh_dev",
     icon: X,
   },
 ];
