@@ -27,7 +27,7 @@ export const Header = () => {
         show ? "translate-y-0" : "-translate-y-[calc(100%+2rem)]"
       }`}
     >
-      <nav className="group relative rounded-full border bg-card px-3 py-2 shadow-lg drop-shadow-2xl backdrop-blur-md transition-all duration-500 ease-in-out hover:bg-gray-900/20">
+      <nav className="group relative rounded-full border bg-card px-3 py-2 drop-shadow-2xl backdrop-blur-md transition-all duration-500 ease-in-out hover:bg-gray-900/20">
         <ul className="flex items-center justify-center gap-2 transition-all duration-500 group-hover:gap-6">
           {navLinks.map(({ href, label, icon: Icon }, index) => (
             <li
