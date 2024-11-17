@@ -1,4 +1,5 @@
 export type BrandLink = {
+  name: string;
   href: string;
   icon: React.ElementType;
 };

@@ -9,18 +9,22 @@ import { BrandLink, Experience, Project, NavLink } from "~/types";
 
 export const socialLinks: BrandLink[] = [
   {
+    name: "GitHub",
     href: "https://github.com/aabuhijleh",
     icon: Github,
   },
   {
+    name: "Stack Overflow",
     href: "https://stackoverflow.com/users/9698583/aabuhijleh",
     icon: Stackoverflow,
   },
   {
+    name: "LinkedIn",
     href: "https://www.linkedin.com/in/aabuhijleh/",
     icon: Linkedin,
   },
   {
+    name: "X",
     href: "https://x.com/aabuhijleh",
     icon: X,
   },

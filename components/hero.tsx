@@ -68,6 +68,7 @@ export const Hero = () => {
                 rel="noopener noreferrer"
               >
                 <link.icon size={32} />
+                <span className="sr-only">{link.name}</span>
               </a>
             </li>
           ))}
