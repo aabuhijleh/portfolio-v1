@@ -1,33 +1,89 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { navLinks } from "~/assets/config";
+import { X, Menu } from "lucide-react";
+import { cn } from "~/lib/utils";
+import { useScrollDirection } from "~/hooks/useScrollDirection";
 
 export const Header = () => {
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [show, setShow] = useState(true);
+  return (
+    <>
+      <HeaderMobile />
+      <HeaderDesktop />
+    </>
+  );
+};
 
-  useEffect(() => {
-    const controlNavbar = () => {
-      if (window.scrollY > lastScrollY && window.scrollY > 100) {
-        setShow(false);
-      } else {
-        setShow(true);
-      }
-      setLastScrollY(window.scrollY);
-    };
+const HeaderMobile = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const scrollingDown = useScrollDirection();
 
-    window.addEventListener("scroll", controlNavbar);
-    return () => window.removeEventListener("scroll", controlNavbar);
-  }, [lastScrollY]);
+  return (
+    <>
+      <button
+        onClick={() => setIsOpen(true)}
+        className={`fixed right-4 top-4 z-50 rounded-full bg-card/30 p-3 drop-shadow-2xl backdrop-blur-md transition-transform duration-300 md:hidden ${
+          scrollingDown ? "-translate-y-[calc(100%+2rem)]" : "translate-y-0"
+        }`}
+      >
+        <Menu />
+      </button>
+
+      <div
+        onClick={() => setIsOpen(false)}
+        className={`fixed inset-0 z-50 bg-black/50 backdrop-blur-sm transition-all duration-300 md:hidden ${
+          isOpen ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
+      />
+
+      <nav
+        className={`fixed right-0 top-0 z-50 h-full w-[280px] bg-card p-6 shadow-2xl transition-all duration-300 ease-in-out md:hidden ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <button
+          onClick={() => setIsOpen(false)}
+          className="absolute right-4 top-4 rounded-full p-2 hover:bg-gray-100/10"
+        >
+          <X className="h-6 w-6 text-card-foreground" />
+        </button>
+
+        <ul className="mt-12 space-y-4">
+          {navLinks.map(({ href, label, icon: Icon }, index) => (
+            <li
+              key={href}
+              className={cn(isOpen && "motion-safe:animate-fade-side")}
+              style={{ animationDelay: `${index * 50}ms` }}
+            >
+              <a
+                href={href}
+                className="flex items-center gap-3 rounded-lg p-3 transition-all duration-200 hover:bg-emerald-500/10"
+                onClick={() => setIsOpen(false)}
+              >
+                <Icon className="h-5 w-5 text-emerald-400" />
+                <span className="text-sm font-medium text-card-foreground">
+                  {label}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </>
+  );
+};
+
+const HeaderDesktop = () => {
+  const scrollingDown = useScrollDirection();
 
   return (
     <header
-      className={`fixed left-1/2 top-4 z-50 -translate-x-1/2 overflow-hidden transition-transform duration-300 ${
-        show ? "translate-y-0" : "-translate-y-[calc(100%+2rem)]"
+      className={`fixed left-1/2 top-4 z-50 hidden -translate-x-1/2 overflow-hidden transition-transform duration-300 md:block ${
+        !scrollingDown ? "translate-y-0" : "-translate-y-[calc(100%+2rem)]"
       }`}
     >
-      <nav className="group relative rounded-full border bg-card px-3 py-2 drop-shadow-2xl backdrop-blur-md transition-all duration-500 ease-in-out hover:bg-gray-900/20">
+      <nav className="group relative rounded-full border bg-card/30 px-3 py-2 drop-shadow-2xl backdrop-blur-md transition-all duration-500 ease-in-out">
         <ul className="flex items-center justify-center gap-2 transition-all duration-500 group-hover:gap-6">
           {navLinks.map(({ href, label, icon: Icon }, index) => (
             <li
