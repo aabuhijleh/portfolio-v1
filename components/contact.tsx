@@ -12,13 +12,13 @@ export const Contact = () => {
         className={`flex flex-col gap-8 text-center transition-all duration-1000 ${
           isIntersecting
             ? "translate-y-0 opacity-100"
-            : "translate-y-10 opacity-0"
+            : "motion-safe:translate-y-10 motion-safe:opacity-0"
         }`}
         ref={targetRef as RefObject<HTMLDivElement>}
       >
         <h2 className="text-4xl font-bold">
           Let&apos;s Connect!{" "}
-          <span className="inline-block animate-bounce">👋</span>
+          <span className="inline-block motion-safe:animate-bounce">👋</span>
         </h2>
 
         <p className="mx-auto max-w-3xl text-xl text-muted-foreground">

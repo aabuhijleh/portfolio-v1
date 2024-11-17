@@ -64,7 +64,6 @@ export default {
         wave: "wave 2.5s infinite",
         "fade-up": "fade-up 0.5s ease-out backwards",
         "fade-side": "fade-side 0.5s ease-out backwards",
-        enter: "enter 0.7s ease-out forwards",
       },
       keyframes: {
         gradient: {
@@ -100,10 +99,6 @@ export default {
             opacity: "1",
             transform: "translateX(0)",
           },
-        },
-        enter: {
-          "0%": { transform: "scaleX(0)" },
-          "100%": { transform: "scaleX(1)" },
         },
       },
     },

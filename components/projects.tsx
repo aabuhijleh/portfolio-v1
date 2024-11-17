@@ -16,7 +16,7 @@ export const Projects = () => {
         <div className="mb-16 flex items-center gap-4">
           <div
             className={`hidden h-[2px] flex-grow origin-right rounded-full bg-emerald-500/70 transition-transform duration-1000 sm:block ${
-              isIntersecting ? "scale-x-100" : "scale-x-0"
+              isIntersecting ? "scale-x-100" : "motion-safe:scale-x-0"
             }`}
           />
           <h2 className="text-center text-2xl font-bold sm:text-3xl">
@@ -24,7 +24,7 @@ export const Projects = () => {
           </h2>
           <div
             className={`h-[2px] flex-grow origin-left rounded-full bg-emerald-500/70 transition-transform duration-1000 ${
-              isIntersecting ? "scale-x-100" : "scale-x-0"
+              isIntersecting ? "scale-x-100" : "motion-safe:scale-x-0"
             }`}
           />
         </div>
@@ -33,13 +33,13 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={project.name}
-              className="group flex h-full flex-col rounded-lg border bg-card p-6 transition-all hover:shadow-lg"
+              className={`group flex h-full flex-col rounded-lg border bg-card p-6 transition-all duration-1000 ease-out hover:shadow-lg ${
+                isIntersecting
+                  ? "translate-y-0 opacity-100"
+                  : "motion-safe:translate-y-12 motion-safe:opacity-0"
+              } `}
               style={{
-                opacity: isIntersecting ? 1 : 0,
-                transform: isIntersecting
-                  ? "translateY(0)"
-                  : "translateY(50px)",
-                transition: `all 1s ease-out ${index * 0.2}s`,
+                transitionDelay: `${index * 0.2}s`,
               }}
             >
               <div className="flex-1">

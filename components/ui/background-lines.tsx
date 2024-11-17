@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "~/lib/utils";
-import { motion } from "framer-motion";
-import React from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export const BackgroundLines = ({
   children,
@@ -14,6 +14,15 @@ export const BackgroundLines = ({
     duration?: number;
   };
 }) => {
+  const [animate, setAnimate] = useState(true);
+  const shouldReduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    if (shouldReduceMotion) {
+      setAnimate(false);
+    }
+  }, [shouldReduceMotion]);
+
   return (
     <div
       className={cn(
@@ -21,7 +30,7 @@ export const BackgroundLines = ({
         className,
       )}
     >
-      <SVG svgOptions={svgOptions} />
+      {animate && <SVG svgOptions={svgOptions} />}
       {children}
     </div>
   );

@@ -32,7 +32,7 @@ export const Header = () => {
           {navLinks.map(({ href, label, icon: Icon }, index) => (
             <li
               key={href}
-              className="animate-fade-side"
+              className="motion-safe:animate-fade-side"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <a

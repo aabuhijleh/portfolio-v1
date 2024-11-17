@@ -15,10 +15,11 @@ export const Hero = () => {
       <div className="z-20 flex w-full flex-col gap-8">
         <div>
           <div className="mb-2 tracking-widest text-emerald-400 sm:text-lg">
-            <span className="inline-block animate-wave">👋</span>, my name is
+            <span className="inline-block motion-safe:animate-wave">👋</span>,
+            my name is
           </div>
 
-          <h1 className="inline-block animate-gradient scroll-m-20 bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 bg-[size:400%] bg-clip-text text-6xl font-extrabold tracking-tight text-transparent md:text-9xl">
+          <h1 className="inline-block scroll-m-20 bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 bg-[size:400%] bg-clip-text text-6xl font-extrabold tracking-tight text-transparent motion-safe:animate-gradient md:text-9xl">
             Abed <span className="whitespace-nowrap">Abu-Hijleh</span>
           </h1>
           <div className="mt-4 w-max scroll-m-20 pb-2 text-lg sm:text-2xl md:text-3xl">
@@ -30,7 +31,7 @@ export const Hero = () => {
           </div>
         </div>
 
-        <ul className="flex flex-wrap gap-2 duration-0 animate-in">
+        <ul className="flex flex-wrap gap-2 duration-0">
           {socialLinks.map((link, index) => (
             <li
               key={link.href}
@@ -59,7 +60,8 @@ export const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="inline-block animate-bounce">📄</span> View resume
+            <span className="inline-block motion-safe:animate-bounce">📄</span>{" "}
+            View resume
           </a>
           <Link className="neon-button group" href="#contact">
             <span className="inline-block transition-transform group-hover:rotate-12">

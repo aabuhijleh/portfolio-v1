@@ -13,7 +13,7 @@ export const Work = () => {
       <div className="mb-16 flex items-center gap-4">
         <div
           className={`hidden h-[2px] flex-grow origin-right rounded-full bg-emerald-500/70 transition-transform duration-1000 sm:block ${
-            isIntersecting ? "scale-x-100" : "scale-x-0"
+            isIntersecting ? "scale-x-100" : "motion-safe:scale-x-0"
           }`}
         />
         <h2 className="text-center text-2xl font-bold sm:text-3xl">
@@ -21,7 +21,7 @@ export const Work = () => {
         </h2>
         <div
           className={`h-[2px] flex-grow origin-left rounded-full bg-emerald-500/70 transition-transform duration-1000 ${
-            isIntersecting ? "scale-x-100" : "scale-x-0"
+            isIntersecting ? "scale-x-100" : "motion-safe:scale-x-0"
           }`}
         />
       </div>
@@ -29,7 +29,7 @@ export const Work = () => {
       <div className="relative" ref={targetRef as RefObject<HTMLDivElement>}>
         {/* Timeline line */}
         <div
-          className={`absolute left-4 h-full w-0.5 -translate-x-1/2 transform bg-gray-200 transition-opacity duration-700 md:left-1/2 ${isIntersecting ? "opacity-100" : "opacity-0"}`}
+          className={`absolute left-4 h-full w-0.5 -translate-x-1/2 transform bg-gray-200 transition-opacity duration-700 md:left-1/2 ${isIntersecting ? "opacity-100" : "motion-safe:opacity-0"}`}
         />
 
         {experience.map((job, index) => (
@@ -41,7 +41,7 @@ export const Work = () => {
             >
               {/* Timeline dot */}
               <div
-                className={`absolute left-4 h-4 w-4 -translate-x-1/2 transform rounded-full bg-emerald-500 transition-opacity duration-700 md:left-1/2 ${isIntersecting ? "opacity-100" : "opacity-0"}`}
+                className={`absolute left-4 h-4 w-4 -translate-x-1/2 transform rounded-full bg-emerald-500 transition-opacity duration-700 md:left-1/2 ${isIntersecting ? "opacity-100" : "motion-safe:opacity-0"}`}
               />
               <TimelineCard job={job} index={index} />
             </div>
