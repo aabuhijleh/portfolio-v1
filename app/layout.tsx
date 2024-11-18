@@ -32,15 +32,18 @@ export const metadata: Metadata = {
   creator: siteConfig.name,
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   keywords: [
-    "Abdurrahman Abu-Hijleh",
+    "Abed",
+    "Abdurrahman",
+    "Abu-Hijleh",
     "developer",
     "software engineer",
     "web development",
+    "full stack",
   ],
 };
 
 export const viewport: Viewport = {
-  themeColor: "#050917",
+  themeColor: siteConfig.themeColor,
   colorScheme: "dark",
 };
 

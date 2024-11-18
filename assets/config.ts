@@ -11,6 +11,7 @@ export const siteConfig = {
   name: "Abed Abu-Hijleh",
   description: "Abed Abu-Hijleh is a full-stack software engineer 👨‍💻",
   url: "https://aabuhijleh.com",
+  themeColor: "#020817",
 };
 
 export const socialLinks: BrandLink[] = [
