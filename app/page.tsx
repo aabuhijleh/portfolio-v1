@@ -4,11 +4,12 @@ import { Contact } from "~/components/contact";
 import { Work } from "~/components/work";
 import { Projects } from "~/components/projects";
 import { Footer } from "~/components/footer";
-import { Header } from "~/components/header";
+import { Navbar } from "~/components/navbar";
+
 export default function Home() {
   return (
     <main className="mx-auto max-w-screen-xl px-8">
-      <Header />
+      <Navbar />
       <Hero />
       <About />
       <Work />

@@ -39,28 +39,28 @@ export const socialLinks: BrandLink[] = [
 
 export const navLinks: NavLink[] = [
   {
-    href: "#home",
     label: "Home",
+    href: "#home",
     icon: Home,
   },
   {
-    href: "#about",
     label: "About",
+    href: "#about",
     icon: User,
   },
   {
-    href: "#work",
     label: "Work",
+    href: "#work",
     icon: Briefcase,
   },
   {
-    href: "#projects",
     label: "Projects",
+    href: "#projects",
     icon: FolderGit,
   },
   {
-    href: "#contact",
     label: "Contact",
+    href: "#contact",
     icon: Mail,
   },
 ];

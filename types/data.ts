@@ -5,8 +5,8 @@ export type BrandLink = {
 };
 
 export type NavLink = {
-  href: string;
   label: string;
+  href: string;
   icon: React.ElementType;
 };
 

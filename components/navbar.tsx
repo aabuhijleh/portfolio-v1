@@ -6,16 +6,16 @@ import { X, Menu } from "lucide-react";
 import { cn } from "~/lib/utils";
 import { useScrollDirection } from "~/hooks/useScrollDirection";
 
-export const Header = () => {
+export const Navbar = () => {
   return (
     <>
-      <HeaderMobile />
-      <HeaderDesktop />
+      <NavbarMobile />
+      <NavbarDesktop />
     </>
   );
 };
 
-const HeaderMobile = () => {
+const NavbarMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
   const scrollingDown = useScrollDirection();
 
@@ -28,6 +28,7 @@ const HeaderMobile = () => {
         }`}
       >
         <Menu />
+        <span className="sr-only">Menu</span>
       </button>
 
       <div
@@ -47,6 +48,7 @@ const HeaderMobile = () => {
           className="absolute right-4 top-4 rounded-full p-2 hover:bg-gray-100/10"
         >
           <X className="h-6 w-6 text-card-foreground" />
+          <span className="sr-only">Close</span>
         </button>
 
         <ul className="mt-12 space-y-4">
@@ -74,7 +76,7 @@ const HeaderMobile = () => {
   );
 };
 
-const HeaderDesktop = () => {
+const NavbarDesktop = () => {
   const scrollingDown = useScrollDirection();
 
   return (
