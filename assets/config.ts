@@ -72,7 +72,7 @@ export const experience: Experience[] = [
     companyUrl: "https://www.ninjavan.co",
     date: {
       from: "Sep 2022",
-      to: "Present",
+      to: "Sep 2024",
     },
     accomplishments: [
       "Led a team in developing an order management platform and spearheaded the design and release of new features, coordinating with cross-functional teams to ensure timely delivery and alignment with business goals",
