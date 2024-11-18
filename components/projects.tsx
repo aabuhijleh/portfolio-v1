@@ -3,7 +3,10 @@
 import { ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
 import { useIsIntersecting } from "~/hooks/useIsIntersecting";
-import { SiGithub } from "@icons-pack/react-simple-icons";
+import {
+  SiGithub as Github,
+  SiNpm as Npm,
+} from "@icons-pack/react-simple-icons";
 import { RefObject } from "react";
 import { projects } from "~/assets/config";
 
@@ -68,20 +71,31 @@ export const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <SiGithub className="mr-2 h-4 w-4" />
+                      <Github className="mr-2" />
                       Code
                     </a>
                   </Button>
-                  <Button variant="outline" size="sm" asChild>
-                    <a
-                      href={project.externalUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </a>
-                  </Button>
+                  {project.externalUrl && (
+                    <Button variant="outline" size="sm" asChild>
+                      <a
+                        href={project.externalUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {project.npm ? (
+                          <>
+                            <Npm className="mr-2" />
+                            Package
+                          </>
+                        ) : (
+                          <>
+                            <ExternalLink className="mr-2" />
+                            Live Demo
+                          </>
+                        )}
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>

@@ -29,7 +29,7 @@ export const Contact = () => {
 
         <div className="mt-5 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a href="mailto:aabuhijleh.dev@gmail.com" className="neon-button">
-            ✉️ Email Me
+            <span className="mr-2">✉️</span> Email Me
           </a>
 
           <a
@@ -38,7 +38,7 @@ export const Contact = () => {
             rel="noopener noreferrer"
             className="neon-button"
           >
-            💬 WhatsApp
+            <span className="mr-2">💬</span> WhatsApp
           </a>
         </div>
       </div>

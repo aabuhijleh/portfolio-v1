@@ -59,15 +59,15 @@ export const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="inline-block motion-safe:animate-bounce">
+              <span className="mr-2 inline-block motion-safe:animate-bounce">
                 📄
-              </span>{" "}
+              </span>
               View resume
             </a>
             <Link className="neon-button group" href="#contact">
-              <span className="inline-block transition-transform group-hover:rotate-12">
+              <span className="mr-2 inline-block transition-transform group-hover:rotate-12">
                 🤙
-              </span>{" "}
+              </span>
               Contact me
             </Link>
           </div>

@@ -26,5 +26,6 @@ export type Project = {
   description: string;
   technologies: string[];
   repoUrl: string;
-  externalUrl: string;
+  externalUrl?: string;
+  npm?: boolean;
 };

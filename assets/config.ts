@@ -120,7 +120,7 @@ export const projects: Project[] = [
       "Generates a good looking website using your GitHub profile data.",
     technologies: ["React", "Styled Components", "GitHub GraphQL API"],
     repoUrl: "https://github.com/aabuhijleh/better-github-profile",
-    externalUrl: "https://aabuhijleh.vercel.app/",
+    externalUrl: "https://github.aabuhijleh.com",
   },
   {
     name: "keylogger.js",
@@ -129,6 +129,7 @@ export const projects: Project[] = [
     technologies: ["Node.js", "C++"],
     repoUrl: "https://github.com/aabuhijleh/keylogger.js",
     externalUrl: "https://www.npmjs.com/package/keylogger.js",
+    npm: true,
   },
   {
     name: "electron-selected-text",
@@ -137,6 +138,7 @@ export const projects: Project[] = [
     technologies: ["Node.js", "RobotJS"],
     repoUrl: "https://github.com/aabuhijleh/electron-selected-text",
     externalUrl: "https://www.npmjs.com/package/electron-selected-text",
+    npm: true,
   },
   {
     name: "osw",
@@ -145,5 +147,21 @@ export const projects: Project[] = [
     technologies: ["Node.js", "Yargs", "Inquirer.js"],
     repoUrl: "https://github.com/aabuhijleh/osw",
     externalUrl: "https://www.npmjs.com/package/osw",
+    npm: true,
+  },
+  {
+    name: "Arraf",
+    description:
+      "A PWA that tricks users into thinking they're communicating with a genie by hiding their real input and displaying fake responses, creating an entertaining and interactive experience",
+    technologies: ["Next.js", "Styled Components"],
+    repoUrl: "https://github.com/aabuhijleh/arraf",
+    externalUrl: "https://arraf.aabuhijleh.com",
+  },
+  {
+    name: "Electron TypeScript Quick Start",
+    description:
+      "A TypeScript Electron app template with electron-builder setup for easy distribution.",
+    technologies: ["Electron", "electron-builder"],
+    repoUrl: "https://github.com/aabuhijleh/electron-ts-quick-start",
   },
 ];

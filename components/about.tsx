@@ -10,7 +10,7 @@ import { useInterval } from "~/hooks/useInterval";
 import { cn } from "~/lib/utils";
 import { useIsMobile } from "~/hooks/useIsMobile";
 import { BackgroundGradient } from "./ui/background-gradient";
-import styles from "./about.module.css";
+import styles from "~/styles/about.module.css";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
