@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { socialLinks } from "~/assets/config";
+import { socialLinks } from "~/config";
 import { cn } from "~/lib/utils";
 import { BackgroundLines } from "./ui/background-lines";
 

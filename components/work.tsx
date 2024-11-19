@@ -1,6 +1,6 @@
 "use client";
 
-import { experience } from "~/assets/config";
+import { experience } from "~/config";
 import { TimelineCard } from "./timeline-card";
 import { RefObject } from "react";
 import { useIsIntersecting } from "~/hooks/useIsIntersecting";

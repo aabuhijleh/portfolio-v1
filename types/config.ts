@@ -1,4 +1,4 @@
-export type BrandLink = {
+export type SocialLink = {
   name: string;
   href: string;
   icon: React.ElementType;

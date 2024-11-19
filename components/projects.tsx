@@ -8,7 +8,7 @@ import {
   SiNpm as Npm,
 } from "@icons-pack/react-simple-icons";
 import { RefObject } from "react";
-import { projects } from "~/assets/config";
+import { projects } from "~/config";
 
 export const Projects = () => {
   const { targetRef, isIntersecting } = useIsIntersecting();

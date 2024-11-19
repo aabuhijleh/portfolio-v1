@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { navLinks } from "~/assets/config";
+import { navLinks } from "~/config";
 import { X, Menu } from "lucide-react";
 import { cn } from "~/lib/utils";
 import { useScrollDirection } from "~/hooks/useScrollDirection";

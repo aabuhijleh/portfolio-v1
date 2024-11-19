@@ -5,16 +5,17 @@ import {
   SiX as X,
 } from "@icons-pack/react-simple-icons";
 import { FolderGit, Briefcase, Home, User, Mail } from "lucide-react";
-import { BrandLink, Experience, Project, NavLink } from "~/types";
+import { SocialLink, Experience, Project, NavLink } from "~/types";
 
 export const siteConfig = {
   name: "Abed Abu-Hijleh",
-  description: "Abed Abu-Hijleh is a full-stack software engineer 👨‍💻",
+  description:
+    "Full-stack software engineer specializing in web, mobile, and desktop applications with a passion for building delightful, user-centric solutions.",
   url: "https://aabuhijleh.com",
   themeColor: "#020817",
-};
+} as const;
 
-export const socialLinks: BrandLink[] = [
+export const socialLinks: SocialLink[] = [
   {
     name: "GitHub",
     href: "https://github.com/aabuhijleh",
