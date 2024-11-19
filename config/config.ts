@@ -10,7 +10,7 @@ import { SocialLink, Experience, Project, NavLink } from "~/types";
 export const siteConfig = {
   name: "Abed Abu-Hijleh",
   description:
-    "Full-stack software engineer specializing in web, mobile, and desktop applications with a passion for building delightful, user-centric solutions.",
+    "Abed Abu-Hijleh is a full-stack software engineer who builds delightful web, mobile, and desktop applications that prioritize exceptional user experience.",
   url: "https://aabuhijleh.com",
   themeColor: "#020817",
 } as const;
