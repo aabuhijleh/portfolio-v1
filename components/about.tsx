@@ -71,7 +71,7 @@ export const About = () => {
       )}
     >
       <BackgroundGradient className="rounded">
-        <div className={cn("overflow-hidden rounded")}>
+        <div className={cn("rounded")}>
           <SyntaxHighlighter
             className={cn(styles.editor)}
             language="javascript"

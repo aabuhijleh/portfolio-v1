@@ -18,12 +18,12 @@ export const Hero = () => {
               my name is
             </div>
 
-            <h1 className="inline-block scroll-m-20 bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 bg-[size:400%] bg-clip-text text-6xl font-extrabold tracking-tight text-transparent motion-safe:animate-gradient md:text-9xl">
+            <h1 className="scroll-m-20 bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 bg-[size:400%] bg-clip-text text-6xl font-extrabold tracking-tight text-transparent motion-safe:animate-gradient md:text-9xl">
               Abed <span className="whitespace-nowrap">Abu-Hijleh</span>
             </h1>
             <div className="mt-4 w-max scroll-m-20 pb-2 text-lg sm:text-2xl md:text-3xl">
               I&apos;m a{" "}
-              <span className={cn("relative text-emerald-400")}>
+              <span className={cn("text-emerald-400")}>
                 full-stack software engineer
               </span>
               .
