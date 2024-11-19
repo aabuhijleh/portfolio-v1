@@ -67,7 +67,7 @@ export const About = () => {
     <section
       id="about"
       className={cn(
-        "p-section mx-auto flex scroll-m-16 flex-col items-center justify-center !pt-8 text-[0.9em] min-[390px]:text-[1em]",
+        "p-section mx-auto flex scroll-m-16 flex-col items-center justify-center !pt-8 text-[0.79em] min-[390px]:text-[1em]",
       )}
     >
       <BackgroundGradient className="rounded">

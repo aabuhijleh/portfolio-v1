@@ -1,5 +1,6 @@
 import { RefObject } from "react";
 import { useIsIntersecting } from "~/hooks/useIsIntersecting";
+import { cn } from "~/lib/utils";
 import { Experience } from "~/types";
 
 type TimelineCardProps = {
@@ -16,7 +17,13 @@ export const TimelineCard = ({ job, index }: TimelineCardProps) => {
     : "motion-safe:md:-translate-x-[200px] motion-safe:translate-x-[200px]";
 
   return (
-    <div ref={targetRef as RefObject<HTMLDivElement>} className="p-6 md:w-1/2">
+    <div
+      ref={targetRef as RefObject<HTMLDivElement>}
+      className={cn(
+        "p-6 pr-0 md:w-1/2",
+        !isEven ? "md:pl-0 md:pr-6" : "md:pr-0",
+      )}
+    >
       <div
         className={`transform rounded-lg border bg-card p-6 text-card-foreground shadow-lg transition-all duration-700 ${isIntersecting ? "translate-x-0 opacity-100" : `motion-safe:opacity-0 ${slideDirection}`} ${isEven ? "motion-safe:md:ml-8" : "motion-safe:md:mr-8"} `}
       >

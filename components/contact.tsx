@@ -16,7 +16,7 @@ export const Contact = () => {
         }`}
         ref={targetRef as RefObject<HTMLDivElement>}
       >
-        <h2 className="text-4xl font-bold">
+        <h2 className="text-3xl font-bold sm:text-4xl">
           Let&apos;s Connect!{" "}
           <span className="inline-block motion-safe:animate-bounce">👋</span>
         </h2>

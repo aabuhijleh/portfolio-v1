@@ -32,7 +32,7 @@ export const Projects = () => {
           />
         </div>
 
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(18rem,1fr))] gap-6">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-6 md:grid-cols-[repeat(auto-fill,minmax(18rem,1fr))]">
           {projects.map((project, index) => (
             <div
               key={project.name}
